@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T03:03:39.296+01:00"}
+{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T14:25:20.719+01:00"}
 ---
 
 # Using Smart Contracts as Tools in Agents
@@ -28,4 +28,12 @@ There is already pre-built solutions to call API endpoints "from a smart contrac
 But just telling users to use Chainlink would be boring and rely on a thirdparty service, so we will implement this by hand. We will also have to send back the result to the agent for it to be used in reasoning. The best idea is to just provide a polling API endpoint to poll the response of the API/ tool based on the transaction ID returned by the smart contract call.
 
 ## *1.3.2025 11am CET:* Adding backend
-![![Diagram.canvas]]
+The main logic of the backend is super basic. I was able to setup a simple event handler to watch a smart contract's event based on `watchContractEvents` in the Thirdweb SDK.  It allows listening and printing out all the events on a contract and gives us this data:
+- `eventName` - The "function" called in the contract
+- `arguments` - The returned values (eg. the random number generated and requestId)
+- `address` - The contract address
+- `transactionHash` - The has of the transaction to get more metadata
+
+To now get things running, I made a simple flow to fetch a smart contract and save it as OpenAI function into a database.
+
+![[Google Chrome.mp4]]
