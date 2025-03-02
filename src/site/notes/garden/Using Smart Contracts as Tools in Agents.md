@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T14:25:44.503+01:00"}
+{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T14:29:14.305+01:00"}
 ---
 
 # Using Smart Contracts as Tools in Agents
@@ -36,4 +36,4 @@ The main logic of the backend is super basic. I was able to setup a simple event
 
 To now get things running, I made a simple flow to fetch a smart contract and save it as OpenAI function into a database.
 
-![[Google Chrome.mp4]]
+![](https://youtu.be/4bg53iihLNk)
