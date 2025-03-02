@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T14:30:06.071+01:00"}
+{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T14:30:23.737+01:00"}
 ---
 
 # Using Smart Contracts as Tools in Agents
