@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T15:04:51.952+01:00"}
+{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T15:43:04.173+01:00"}
 ---
 
 # Using Smart Contracts as Tools in Agents
@@ -40,10 +40,15 @@ To now get things running, I made a simple flow to fetch a smart contract and sa
 
 With this info saved I made a small background worker that just listens for an event. It dynamically listens for all contracts that are saved in the database and then uses the contract address to match it to the stored contract. Then it stores an "invocation".
 
-![Pasted image 20250302145026.png](/img/user/Pasted%20image%2020250302145026.png)
-![Pasted image 20250302145042.png](/img/user/Pasted%20image%2020250302145042.png)
+![Pasted image 20250302151730.png](/img/user/Pasted%20image%2020250302151730.png)
 
-See the images above with an example. The lower images shows a script running that calls the contract and prints the returned random number, while the upper one is the mentioned background worker. If we check the database now we can see the contract (added before running the worker and test):
+See the image above with an example. On the left side we can see a script that just executes the transaction and prints the result. On the right side the backend scans for new events and saves the invocation. We can see it on the dashboard now.
 
-and we can see the invocation:
+![Pasted image 20250302153502.png](/img/user/Pasted%20image%2020250302153502.png)
+
+Let's do some changes to that and make sure we show all details. For that we need to add some more features. In the end we also will have to call the webhook of the smart contract. So this is what we should do:
+
+1. When the contract event is detected, send a request to the webhook
+2. Parse the webhook response, code etc. and store it in the database
+3. Show the response, details and transaction info (cost, etc.) in the dashboard
 
