@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T14:30:23.737+01:00"}
+{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T15:04:51.952+01:00"}
 ---
 
 # Using Smart Contracts as Tools in Agents
@@ -37,3 +37,13 @@ The main logic of the backend is super basic. I was able to setup a simple event
 To now get things running, I made a simple flow to fetch a smart contract and save it as OpenAI function into a database.
 
 ![Screenshare of the flow](https://youtu.be/4bg53iihLNk)
+
+With this info saved I made a small background worker that just listens for an event. It dynamically listens for all contracts that are saved in the database and then uses the contract address to match it to the stored contract. Then it stores an "invocation".
+
+![Pasted image 20250302145026.png](/img/user/Pasted%20image%2020250302145026.png)
+![Pasted image 20250302145042.png](/img/user/Pasted%20image%2020250302145042.png)
+
+See the images above with an example. The lower images shows a script running that calls the contract and prints the returned random number, while the upper one is the mentioned background worker. If we check the database now we can see the contract (added before running the worker and test):
+
+and we can see the invocation:
+
