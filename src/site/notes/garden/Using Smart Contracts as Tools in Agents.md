@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T16:12:14.878+01:00"}
+{"dg-publish":true,"permalink":"/garden/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T17:00:02.281+01:00"}
 ---
 
 # Using Smart Contracts as Tools in Agents
@@ -47,7 +47,7 @@ With this info saved I made a small background worker that just listens for an e
 
 See the image above with an example. On the left side we can see a script that just executes the transaction and prints the result. On the right side the backend scans for new events and saves the invocation. We can see it on the dashboard now.
 
-![Pasted image 20250302153502.png](/img/user/Pasted%20image%2020250302153502.png)
+![Pasted image 20250302170001.png](/img/user/Pasted%20image%2020250302170001.png)
 
 Let's do some changes to that and make sure we show all details. For that we need to add some more features. In the end we also will have to call the webhook of the smart contract. So this is what we should do:
 
