@@ -1,7 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/using-smart-contracts-as-tools-in-agents/"}
+{"dg-publish":true,"permalink":"/using-smart-contracts-as-tools-in-agents/","created":"2025-02-27T13:58:51.602+01:00","updated":"2025-03-02T02:49:29.841+01:00"}
 ---
 
+# Using Smart Contracts as Tools in Agents
 This POC experiments with using smart contracts as tools for agents. A common problem with agents now is creating the the tools they interact with. They still require a lot of manual work, like signing up for the API service it's using, setting up billing and API keys. 
 
 Smart contracts allow transparent pricing (each interaction is paid vs. complicated pricing tiers or credit systems) and can be fully automated (no account/ API keys are required). The documentation also can be structured easier.
